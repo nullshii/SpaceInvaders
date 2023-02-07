@@ -11,7 +11,7 @@ namespace Code.Scripts
 
         public bool IsAlive => gameObject.activeInHierarchy;
 
-        private void Awake()
+        private void Start()
         {
             _invaderManager.Add(this);
         }
