@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Code.Scripts
 {
-    public class Player : MonoBehaviour
+    public class Player : MonoBehaviour, IKillable
     {
-        public event Action GameOver;
+        public event Action Lose;
 
         public void Kill()
         {
-            GameOver?.Invoke();
+            Lose?.Invoke();
         }
 
         private void OnTriggerEnter2D(Collider2D other)

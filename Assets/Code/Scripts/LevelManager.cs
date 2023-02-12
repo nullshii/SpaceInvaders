@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Code.Scripts
@@ -14,14 +13,14 @@ namespace Code.Scripts
 
         private void OnEnable()
         {
-            _invaderManager.GameOver += RestartGame;
-            _player.GameOver += RestartGame;
+            _invaderManager.Win += RestartGame;
+            _player.Lose += RestartGame;
         }
 
         private void OnDisable()
         {
-            _invaderManager.GameOver -= RestartGame;
-            _player.GameOver -= RestartGame;
+            _invaderManager.Win -= RestartGame;
+            _player.Lose -= RestartGame;
         }
 
         private void Awake()

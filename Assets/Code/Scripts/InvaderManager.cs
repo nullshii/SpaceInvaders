@@ -8,7 +8,7 @@ namespace Code.Scripts
 {
     public class InvaderManager : MonoBehaviour
     {
-        public event Action GameOver;
+        public event Action Win;
 
         [SerializeField] private float _shootRate;
 
@@ -60,7 +60,7 @@ namespace Code.Scripts
             foundInvader.gameObject.SetActive(false);
 
             if (DeadPercentage == 1f)
-                GameOver?.Invoke();
+                Win?.Invoke();
         }
 
         public void RestoreAllInvaders()

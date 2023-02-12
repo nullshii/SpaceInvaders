@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Code.Scripts
 {
-    public class Invader : MonoBehaviour
+    public class Invader : MonoBehaviour, IKillable
     {
         [SerializeField] private Gun _gun;
 

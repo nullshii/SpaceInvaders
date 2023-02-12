@@ -14,14 +14,9 @@ namespace Code.Scripts
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.TryGetComponent(out Invader invader))
+            if (other.TryGetComponent(out IKillable killable))
             {
-                invader.Kill();
-            }
-
-            if (other.TryGetComponent(out Player player))
-            {
-                player.Kill();
+                killable.Kill();
             }
 
             Destroy(gameObject);
